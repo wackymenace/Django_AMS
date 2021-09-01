@@ -1,0 +1,33 @@
+{% extends 'employee/main.html' %}
+{% load mathfilters %}
+{% load static %}
+
+{% block content %}
+
+
+<form method="POST" action="">
+{% csrf_token %}
+{{ form.customer }}
+{{ form.products }}
+{{ form.notes }}
+<input type="submit" value="Clcik">
+</form>
+<button onclick="item()" id="btn">Click</button>
+
+<iframe id="iframe" src="" style="height:600px;width:100%"></iframe>
+<script>
+function item() {
+products = document.getElementById('id_products');
+products.value;
+idquantity = document.getElementById('id_quantity');
+squantity = document.getElementById('quantity');
+iframe = document.getElementById('iframe');
+iframe.src = "http://192.168.169.253:8001/ims/stockOutItemType/" + products.value;
+setTimeout('click', 1000);
+}
+function click() {
+    document.getElementById('btn').click();
+}
+
+</script>
+{% endblock %}

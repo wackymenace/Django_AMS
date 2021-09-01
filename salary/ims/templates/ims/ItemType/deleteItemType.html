@@ -1,0 +1,14 @@
+{% extends 'employee/main.html' %}
+{% load static %}
+{% block content %}
+
+<p style="color: #fff">Are You Sure You Want To Delete Employee : {{ unit }}?</p>
+
+<form action="" method="POST">
+{% csrf_token %}
+<a href="/details/">Cancel</a>
+<input type="submit" name="Confirm">
+
+</form>
+
+{% endblock %}

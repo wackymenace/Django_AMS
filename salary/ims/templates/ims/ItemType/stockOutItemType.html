@@ -1,0 +1,31 @@
+{% extends 'employee/main.html' %}
+{% load static %}
+{% block content %}
+
+<label>Stock Out Quantity:</label>
+<input type="text" value="" id="quantity">
+<label>Stock Out Price:</label>
+<input type="text" value="" id="price">
+<form action="" method="POST">
+{% csrf_token %}
+<label>Quantity</label>
+{{ form.quantity }}
+<label>Price</label>
+{{ form.price }}
+<input type="submit" name="Confirm" onclick="add()">
+</form>
+<script>
+var quantity = document.getElementById('quantity');
+var idquantity = document.getElementById('id_quantity');
+var idprice = document.getElementById('id_price');
+var price = document.getElementById('price');
+total = Number(idprice.value) / Number(idquantity.value);
+function add() {
+    let x = Number(idquantity.value) - Number(quantity.value);
+    idquantity.value = x;
+    let y = Number(idprice.value) - total;
+    idprice.value = y;
+}
+</script>
+
+{% endblock %}

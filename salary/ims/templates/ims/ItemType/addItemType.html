@@ -1,0 +1,37 @@
+{% extends 'employee/main.html' %}
+{% load static %}
+{% block content %}
+<div class="d-flex justify-content-center align-self-center">
+<form action="" method="POST" class="d-inline-flex flex-column ">
+{% csrf_token %}
+<label>Name</label>
+<div class="p-2">{{ form.name }}</div>
+<label>Category</label>
+<div class="p-2">{{ form.item }}</div>
+<label>Quantity</label>
+<div class="p-2">{{ form.quantity }}</div>
+<label>Price</label>
+<div class="p-2">{{ form.price }}</div>
+<label>SS</label>
+<div class="p-2">{{ form.salePrice }}</div>
+<label>PP</label>
+<div class="p-2">{{ form.purchasePrice }}</div>
+<label>Price Recovered</label>
+<div class="p-2">{{ form.priceRecovered }}</div>
+<label>Date And Time</label>
+<div class="p-2">{{ form.date_created }}</div>
+<input type="submit" name="Confirm" onclick="check()">
+
+</form>
+</div>
+<script>
+function check() {
+var item = document.getElementById('id_item');
+var idquantity = document.getElementById('id_quantity');
+var idprice = document.getElementById('id_price');
+if(item.value === "1") {
+    idprice.value = Number(idquantity.value) * Number(idprice.value);
+}
+}
+</script>
+{% endblock %}

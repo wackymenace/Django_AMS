@@ -1,0 +1,20 @@
+{% extends 'employee/main.html' %}
+
+{% block content %}
+
+
+<table>
+<tmployee Name</th>
+<th>Status</th>
+<th>Time</th>
+<tr>
+{% for statuses in status %}
+<tr>
+<td><a href="/details/{{ statuses.id }}">{{ statuses.employee }}</a></td>
+<td>{{ statuses.attendance_choice }}</td>
+<td>{{ statuses.Time }}</td>
+</tr>
+{% endfor %}
+</table>
+
+{% endblock %}

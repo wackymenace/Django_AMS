@@ -1,0 +1,24 @@
+table, td {
+    border-width: 1px;
+    border-style: double;
+    border-color: black;
+    padding: 20px;
+}
+
+.border-span {
+    border-top: 1px solid #000;
+    padding: 20px !important;
+}
+
+.custom-css a {
+    text-decoration: none;
+}
+.custom-css a:hover {
+    text-decoration: none !important;
+    background: none;
+    color: white;
+}
+
+.non-underline a{
+    text-decoration: none !important;
+}

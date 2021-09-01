@@ -1,0 +1,32 @@
+*ADD                   / ppp secret add name=ali
+
+                       /interface pppoe-client 
+                        add name=pppoe-user-mike user=user password=passwd interface=wlan1 \
+                        service-name=internet disabled=no
+                       
+                       /ip pool 
+                        add name="pppoe-pool" ranges=10.1.1.62-10.1.1.72
+
+                       /ppp profile 
+                        add name="pppoe-profile" local-address=10.1.1.1 remote-address=pppoe-pool
+
+                       /ppp secret 
+                        add name=user password=passwd service=pppoe profile=pppoe-profile
+
+                       /interface pppoe-server server 
+                        add service-name=internet interface=wlan1 default-profile=pppoe-profile disabled=no
+
+                       /ppp profile add name="pppoe-128k" local-address=10.10.1.1 dns-server="192.168.25.101" rate-limit=128k/128
+
+                       /ppp secret add name="test128" password="test128" service=pppoe profile="pppoe-128k" remote-address=10.10.1.111
+
+*INTERFACE             /interface pppoe-client
+ can use with           ac-name, add-default-route, allow, default-route-distance, dial-on-demand, interface, keepalive-timeout, max-mru, max-mtu, mrru, name, password, profile, service-name, use-peer-dns, user
+
+*MONITOR               /interface pppoe-client monitor
+ can use with           ac-mac, ac-name, active-links, encoding, local-address, remote-address, mru, mtu, service-name, status, uptime
+
+
+
+*REMOVE                / interface pppoe-server remove [find name=ali]
+*UPDATE                /ppp secret set [find name=ali] name=ali2
