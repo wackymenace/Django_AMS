@@ -1,6 +1,7 @@
 # Django_AMS
-AMS: Attendance Management System on Django: Python's Web Framework
-
-## Screenshots
-### Dashboard
-![alt text](https://github.com/wackymenace/Django_AMS/blob/main/images/dashboard.png)
+AMS: Attendance Management System
+Created on Django: Python's Web Framework
+<br><br><hr>
+* ## Screenshots
+  * #### Dashboard Page
+  ![Dashboard](https://github.com/wackymenace/Django_AMS/blob/main/images/dashboard.png)
