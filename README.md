@@ -13,3 +13,9 @@ Created on Django: Python's Web Framework
   ![employee](https://github.com/wackymenace/Django_AMS/blob/main/images/employeeAttendance.png)
   * #### Inventory
   ![inventory](https://github.com/wackymenace/Django_AMS/blob/main/images/inventoryList.png)
+<br><br>
+* ## Technologies I Used
+  * Django
+  * Djang-Filters
+  * Pillow
+  * Django-Crispy-Forms
