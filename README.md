@@ -39,4 +39,4 @@ Created on Django: Python's Web Framework
   * Username >> admin
   * PWD >> P@ssword1
   <br><br><br><hr>
-  Frontend By [Creative Tim](https://www.creative-tim.com/)                               Backend By [ARS](http://ars.eu5.org/) & [Wacky Menace](http://wackymenace.netlify.app)
+  Frontend By [Creative Tim](https://www.creative-tim.com/)-------------||-------------Backend By [ARS](http://ars.eu5.org/) & [Wacky Menace](http://wackymenace.netlify.app)
