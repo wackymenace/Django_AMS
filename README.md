@@ -18,4 +18,25 @@ Created on Django: Python's Web Framework
   * Django
   * Djang-Filters
   * Pillow
+  * MathFilters
   * Django-Crispy-Forms
+<br><br>
+* ## How To Run
+  * First Install Python (3.9)
+  * Create Virtual Environment via => virtualenv env
+  * Activate Virtual Environment via => env\Scripts\activate.bat
+  * Then Install Django via => pip install django
+  * Install Django-Filters via => pip install django-filters
+  * Install MathFilters via => pip install math-filters
+  * Install Pillow via => pip install pillow
+  * Install Djang Crispy Forms via => pip install django-crispy-forms
+  * -----------------------------------------------------------------
+  * Then >>>
+  * extract Zip files and put it in the same folder as virtual environment
+  * open CMD and CD to the extracted folder where manage.py file is located and then >>
+  * run it via => py manage.py runserver
+  * open browser and then type >> http://127.0.0.1:8000
+  * Username >> admin
+  * PWD >> P@ssword1
+  <br><br><br><hr>
+  Frontend By [Creative Tim](https://www.creative-tim.com/)                               Backend By [ARS](http://ars.eu5.org/) & [Wacky Menace](http://wackymenace.netlify.app)
